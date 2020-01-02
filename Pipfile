@@ -1,0 +1,22 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+autopep8 = "*"
+mypy = "*"
+rope = "*"
+coverage = "*"
+v = {editable = true,version = "*"}
+
+[packages]
+exif = "*"
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+test = "coverage run --source src --omit='**/test*' -m unittest discover src"
+report = "coverage report -m"
